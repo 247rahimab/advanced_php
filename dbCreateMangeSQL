@@ -1,0 +1,19 @@
+drop database if exists todo;
+create database todo
+character set utf8
+collate utf8_general_ci;
+
+use todo;
+
+drop table if exists users;
+create table if not exists users (
+    id int not null auto_increment,
+    username varchar(200),
+    password varchar(200),
+    email varchar(200),
+    ipAddress varchar (200),
+    time varchar(200),
+    date timestamp default current_timestamp,
+    primary key(id)
+)engine=innoDB charset=utf8;
+
